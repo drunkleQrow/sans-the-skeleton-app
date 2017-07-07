@@ -1,0 +1,10 @@
+<div [ngSwitch]="step">
+  <iframe *ngSwitchCase="1" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Vr4IYjeplJA" frameborder="0" allowfullscreen></iframe>
+  <iframe *ngSwitchCase="2" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/arvDV2JGE8s" frameborder="0" allowfullscreen></iframe>
+  <iframe *ngSwitchCase="3" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/VC-yGc8WQfc" frameborder="0" allowfullscreen></iframe>
+  <iframe *ngSwitchCase="4" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/4kqbKEqzsAI" frameborder="0" allowfullscreen></iframe>
+  <iframe *ngSwitchCase="5" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/2QlYKKiT4Js" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<button [hidden]="step < 2" (click)="decrementStep()">Back</button>
+<button [hidden]="step > 4" (click)="incrementStep()">Next</button>
